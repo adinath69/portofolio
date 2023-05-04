@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: linear-gradient(60deg,#29323c 0%,#485563 100%);
+}
+.about_container {
+    margin: 100px 25px 0px 25px;
+    padding: 20px;
+    color: #fff;
+  }
+  .About_1 {
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin-bottom: 25px;
+  }
+  .meandi {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    margin-bottom: 25px;
+  }
+  .works_shortcut{
+    font-weight: 700;
+    color: rgb(7, 150, 233);
+    text-decoration: none;
+  }
+  .ig{
+    font-weight: 700;
+    color: rgb(221, 163, 18);
+    text-decoration: none;
+  }
+  .skill_area {
+    color: #06ddd2;
+    display: grid;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .skills {
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .skill_all {
+    background-color: #ababab;
+    height: 40px;
+    border-radius: 10px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    text-align: center;
+    width: 200px;
+  }
+  @media (max-width: 600px) {
+    .nav-list {
+      gap: 10px;
+      padding-top: 20px;
+      padding-right: 8%;
+    }
+    .nav-list li a {
+      font-size: 18px;
+    }
+    .profile {
+      padding-bottom: 20px;
+      margin-top: 45%;
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+    .About_1 {
+      text-align: start;
+    }
+    .skills {
+      text-align: start;
+    }
+    .skill_all {
+      width: 300px;
+    }
+  }
+  .parent{
+    margin-top: 50px;
+    display: flex;
+    /* height: 100vh; */
+  }
+  .skill-bars{
+    margin: auto;
+  
+    padding: 25px 30px;
+    width: 95%;
+    background: #353535;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  .skill-bars .bar{
+    margin: 20px 0;
+  }
+  .skill-bars .bar:first-child{
+    margin-top: 0px;
+  }
+  .skill-bars .bar .info{
+    margin-bottom: 5px;
+    background-color: #353535;
+  }
+  .skill-bars .bar .info span{
+    font-weight: 500;
+    font-size: 17px;
+    color: #fff;
+    /* opacity: ; */
+    animation: showText 0.5s 1s linear forwards;
+  }
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: #353535;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    /* box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+                0 1px rgba(255,255,255,0.8); */
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    /* background: #6665ee; */
+    background: #06ddd2;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  .bar .progress-line.html span{
+    width: 55%;
+  }
+  .bar .progress-line.css span{
+    width: 45%;
+  }
+  .bar .progress-line.javascript span{
+    width: 40%;
+  }
+  .bar .progress-line.react-js span{
+    width: 35%;
+  }
+  .bar .progress-line.github span{
+    width: 60%;
+  }
+  .progress-line span::before{
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #262626;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  .progress-line span::after{
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 800;
+    background: #282828;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  .progress-line.html span::after{
+    content: "55%";
+  }
+  .progress-line.css span::after{
+    content: "45%";
+  }
+  .progress-line.javascript span::after{
+    content: "40%";
+  }
+  .progress-line.react-js span::after{
+    content: "35%";
+  }
+  .progress-line.github span::after{
+    content: "60%";
+  }
